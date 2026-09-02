@@ -4,6 +4,20 @@
 
 All notable changes to this skill are documented here.
 
+## [0.1.1] - 2026-09-02
+
+### Added
+
+- `Fire and Materials` with its verified Wiley RSS feed and ISSN-scoped fallback;
+- `Journal of Structural Fire Engineering` with online ISSN `2040-2325`;
+- `International Journal of Wildland Fire` with online ISSN `1448-5516`.
+
+### Changed
+
+- expanded the starter workbook from 71 to 74 journals;
+- profile-only ISSN fallbacks now skip the first-party listing parser unless a `listing_url` is configured;
+- added regression coverage for the three journals, workbook rows, and listing-profile behavior.
+
 ## [0.1.0] - 2026-09-01
 
 ### Added
@@ -37,6 +51,20 @@ All notable changes to this skill are documented here.
 ## Chinese Translation (Reference Only)
 
 The following Chinese text is provided only as a translation to help Chinese-speaking readers. The English section above is the normative version.
+
+## [0.1.1] - 2026-09-02
+
+### 新增
+
+- `Fire and Materials`，使用已验证的Wiley RSS和ISSN限定后备；
+- `Journal of Structural Fire Engineering`，在线ISSN为 `2040-2325`；
+- `International Journal of Wildland Fire`，在线ISSN为 `1448-5516`。
+
+### 变更
+
+- Excel模板从71种期刊扩展到74种；
+- 只有配置 `listing_url` 的期刊才调用出版社列表解析器，只有ISSN的后备配置不再产生虚假的列表错误；
+- 增加三种期刊、Excel条目及列表配置行为的回归测试。
 
 ## [0.1.0] - 2026-09-01
 

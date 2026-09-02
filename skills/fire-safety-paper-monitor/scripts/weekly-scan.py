@@ -50,6 +50,15 @@ JOURNAL_PROFILES = {
         "listing_url": "https://link.springer.com/journal/10694/articles",
         "issn": "1572-8099",
     },
+    "Fire and Materials": {
+        "issn": "1099-1018",
+    },
+    "Journal of Structural Fire Engineering": {
+        "issn": "2040-2325",
+    },
+    "International Journal of Wildland Fire": {
+        "issn": "1448-5516",
+    },
 }
 XML_NS_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 PKG_REL_NS = "http://schemas.openxmlformats.org/package/2006/relationships"
@@ -58,6 +67,10 @@ SPREADSHEET_NS = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 USER_AGENT = "HermesAcademicRSS/1.0 (weekly fire safety paper monitor; https://hermes-agent.nousresearch.com)"
 HTTP_TIMEOUT = 25
 MAX_WORKERS = 8
+
+
+def has_first_party_listing(journal: str) -> bool:
+    return bool(JOURNAL_PROFILES.get(journal, {}).get("listing_url"))
 
 
 def now_bj() -> dt.datetime:
@@ -685,7 +698,7 @@ def run(no_update: bool = False, debug: bool = False) -> int:
     # Some journals have no stable RSS URL but expose a publisher-maintained
     # latest-articles listing. Snapshot that first-party listing as well.
     for j in no_rss:
-        if j["journal"] not in JOURNAL_PROFILES:
+        if not has_first_party_listing(j["journal"]):
             continue
         if debug:
             log(f"first_party_listing {j['journal']}")

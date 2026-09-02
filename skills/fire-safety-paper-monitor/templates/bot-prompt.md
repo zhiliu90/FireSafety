@@ -28,6 +28,8 @@ Read `journal_rss_table.xlsx`, containing journal names and optional official RS
 
 For `Fire Technology`, use the Springer journal article list and online ISSN `1572-8099`, then deduplicate with Crossref.
 
+For `Fire and Materials`, use the official Wiley RSS feed and online ISSN `1099-1018` as the precise fallback. For `Journal of Structural Fire Engineering` and `International Journal of Wildland Fire`, keep the RSS cell blank unless a reliable publisher feed is verified, and use ISSN-scoped Crossref (`2040-2325` and `1448-5516`).
+
 ## Title filter
 
 Include papers whose titles contain, case-insensitively:
@@ -200,6 +202,12 @@ The following Chinese text is provided only as a translation to help Chinese-spe
 - 主要读取 Springer 官方论文列表：`https://link.springer.com/journal/10694/articles`；
 - 使用在线 ISSN `1572-8099` 进行 Crossref 补充和后备；
 - 合并后按 DOI 和题名去重。
+
+对于新增期刊：
+
+- `Fire and Materials` 使用Wiley官方RSS，在线ISSN为 `1099-1018`；
+- `Journal of Structural Fire Engineering` 的RSS留空，使用在线ISSN `2040-2325`进行Crossref后备；
+- `International Journal of Wildland Fire` 的RSS留空，使用在线ISSN `1448-5516`进行Crossref后备。
 
 ## 标题筛选规则
 

@@ -1,7 +1,7 @@
 ---
 name: fire-safety-paper-monitor
 description: Build and run weekly fire-safety paper monitoring.
-version: 0.1.0
+version: 0.1.1
 author: Zhi Liu, Hermes Agent
 platforms: [linux, macos, windows]
 metadata:
@@ -47,7 +47,7 @@ Read `references/system-requirements.md` before deployment. Full end-to-end auto
 
 ## Bundled Files
 
-- `templates/journal-rss-table.xlsx` — starter list of 71 journals with English machine-readable headers and known RSS URLs.
+- `templates/journal-rss-table.xlsx` — starter list of 74 journals with English machine-readable headers and known RSS URLs.
 - `templates/bot-prompt.md` — one file with English and Chinese task-prompt sections.
 - `scripts/weekly-scan.py` — deterministic RSS/publisher/Crossref collector.
 - `scripts/weekly-send.py` — freshness gate for the summary stage.
@@ -106,7 +106,7 @@ Source priority:
 3. ISSN-scoped Crossref fallback;
 4. OpenAlex only for metadata or abstract enrichment.
 
-`Fire Technology` uses the Springer articles page plus online ISSN `1572-8099` because the template has no RSS for it.
+`Fire Technology` uses the Springer articles page plus online ISSN `1572-8099`. `Fire and Materials` uses its official Wiley RSS and online ISSN `1099-1018`. `Journal of Structural Fire Engineering` and `International Journal of Wildland Fire` use ISSN-scoped Crossref fallbacks (`2040-2325` and `1448-5516`) because no reliable publisher RSS was verified.
 
 Completion criterion: every configured source is classified as RSS, publisher fallback, or metadata fallback; none is silently dropped.
 
@@ -269,7 +269,7 @@ A failure in retrieval, Zotero write, browser fallback, or report freshness must
 
 ## 包含文件
 
-- `templates/journal-rss-table.xlsx`：71种期刊模板；为保证机器兼容，表头使用英文，中文解释见本翻译部分；
+- `templates/journal-rss-table.xlsx`：74种期刊模板；为保证机器兼容，表头使用英文，中文解释见本翻译部分；
 - `templates/bot-prompt.md`：同一文件包含英文和中文提示词；
 - `scripts/weekly-scan.py`：确定性采集器；
 - `scripts/weekly-send.py`：总结阶段新鲜度检查；
@@ -307,7 +307,7 @@ A failure in retrieval, Zotero write, browser fallback, or report freshness must
 3. ISSN限定Crossref；
 4. OpenAlex仅补充元数据或摘要。
 
-没有可靠RSS时保持Excel单元格为空，不能把HTML主页填入RSS列。`Fire Technology` 使用Springer论文列表和在线ISSN `1572-8099`。
+没有可靠RSS时保持Excel单元格为空，不能把HTML主页填入RSS列。`Fire Technology` 使用Springer论文列表和在线ISSN `1572-8099`；`Fire and Materials` 使用Wiley官方RSS及在线ISSN `1099-1018`；`Journal of Structural Fire Engineering` 和 `International Journal of Wildland Fire` 分别使用ISSN `2040-2325`、`1448-5516`进行Crossref后备检索。
 
 完成标准：每个期刊都有RSS、出版社后备或元数据后备分类。
 

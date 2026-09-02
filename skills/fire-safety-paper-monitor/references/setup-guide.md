@@ -6,7 +6,7 @@ This guide helps another agent reproduce the weekly workflow. The package contai
 
 ## Files
 
-- `templates/journal-rss-table.xlsx`: 71 starter journals and known RSS URLs;
+- `templates/journal-rss-table.xlsx`: 74 starter journals and known RSS URLs;
 - `templates/bot-prompt.md`: English and Chinese prompts in one file;
 - `scripts/weekly-scan.py`: RSS/publisher/Crossref collection and snapshots;
 - `scripts/weekly-send.py`: freshness gate for the summary stage;
@@ -59,7 +59,7 @@ Journal name | RSS
 
 Use official RSS URLs. Leave the RSS cell blank when no reliable feed exists. Do not put HTML journal pages in the RSS column.
 
-`Fire Technology` uses the Springer articles page and Crossref online ISSN `1572-8099`.
+`Fire Technology` uses the Springer articles page and Crossref online ISSN `1572-8099`. `Fire and Materials` uses the Wiley RSS feed and ISSN `1099-1018`. `Journal of Structural Fire Engineering` and `International Journal of Wildland Fire` use ISSN-scoped Crossref fallbacks (`2040-2325` and `1448-5516`).
 
 ## Direct institutional access
 
@@ -119,7 +119,7 @@ Before scheduling:
 - ScienceDirect/ASCE/Wiley may block automated browsers;
 - Zotero write authorization can time out;
 - PDF upload behavior can vary by Zotero build;
-- only `Fire Technology` has a dedicated publisher listing profile in the bundled collector; other no-RSS journals mainly use Crossref until extended.
+- only `Fire Technology` has a dedicated publisher-listing parser; profile-only journals skip that parser and use ISSN-scoped Crossref without generating a false listing error.
 
 ---
 
@@ -131,7 +131,7 @@ The following Chinese text is provided only as a translation to help Chinese-spe
 
 ## 1. 包内文件
 
-- `journal_rss_table.xlsx`：期刊名称与官方 RSS 地址。当前包含 71 种期刊，其中部分期刊没有 RSS，需要出版社页面或 Crossref 后备。
+- `journal_rss_table.xlsx`：期刊名称与官方 RSS 地址。当前包含74种期刊，其中部分期刊没有RSS，需要出版社页面或Crossref后备。
 - `templates/bot-prompt.md`：同一文件先提供英文主版本，再提供中文翻译。
 - `scripts/weekly-scan.py`：RSS、Springer页面、Crossref、快照差异、标题筛选及报告生成脚本。
 - `scripts/weekly-send.py`：检查13点结果是否存在且未过期，并把原始报告交给后续总结阶段。
@@ -192,13 +192,21 @@ Journal name | RSS
 - 不要把普通 HTML 期刊主页填入 RSS 列。
 - 新增期刊后先单独测试 RSS 是否能解析出真实条目。
 
-`Fire Technology` 的 RSS 留空，主来源为 Springer 官方文章列表：
+`Fire Technology` 的RSS留空，主来源为Springer官方文章列表：
 
 ```text
 https://link.springer.com/journal/10694/articles
 ```
 
-Crossref 后备使用在线 ISSN `1572-8099`。
+其Crossref后备使用在线ISSN `1572-8099`。
+
+`Fire and Materials` 使用Wiley官方RSS：
+
+```text
+https://onlinelibrary.wiley.com/feed/10991018/most-recent
+```
+
+`Journal of Structural Fire Engineering` 和 `International Journal of Wildland Fire` 的RSS留空，分别使用在线ISSN `2040-2325`、`1448-5516`进行Crossref后备检索。
 
 ## 6. 校园网与代理
 
