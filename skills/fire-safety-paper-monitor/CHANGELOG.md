@@ -1,0 +1,66 @@
+# Changelog
+
+## English (Normative)
+
+All notable changes to this skill are documented here.
+
+## [0.1.0] - 2026-09-01
+
+### Added
+
+- Weekly two-stage collector and summary workflow;
+- Starter workbook with 71 civil, structural, and fire-safety journals;
+- RSS, Springer listing, and Crossref collection script;
+- Idempotent `first_seen` / `first_reported` snapshot behavior;
+- Direct institutional-access and verified-PDF rules;
+- Isolated-browser audit and CAPTCHA boundary;
+- Evidence-bounded Chinese summaries;
+- Telegram digest format with hidden URLs;
+- PDF-backed dated Zotero archive semantics;
+- bilingual single-file sections for the README, Skill guide, prompt, setup, installation, system, Zotero, browser, script, security, and changelog documents;
+- English machine-readable Excel column headers, explained in the Chinese translation;
+- exact system/software requirements with a validated macOS stack and Windows/Linux support levels;
+- installation, setup, Zotero, browser, and security documentation;
+- Telegram example image;
+- shareable release ZIP workflow.
+
+### Known limitations
+
+- Zotero Local API write authorization may require user interaction and can time out;
+- Local API file upload behavior varies by Zotero build;
+- ScienceDirect, ASCE, Wiley, and other publishers may block automation with CAPTCHA;
+- the collector includes a dedicated publisher profile only for `Fire Technology`; other no-RSS journals rely primarily on Crossref unless extended;
+- publisher RSS author fields may contain affiliations or ORCID text and require conservative handling.
+
+---
+
+## Chinese Translation (Reference Only)
+
+The following Chinese text is provided only as a translation to help Chinese-speaking readers. The English section above is the normative version.
+
+## [0.1.0] - 2026-09-01
+
+### 新增
+
+- 每周两阶段论文采集和总结流程；
+- 包含71种土木、结构和火灾安全期刊的Excel模板；
+- RSS、Springer列表和Crossref采集脚本；
+- `first_seen` / `first_reported` 稳定快照；
+- 校园网直连和真实PDF验证规则；
+- 隔离浏览器审计及人机验证边界；
+- 有证据来源的中文总结；
+- 隐藏完整URL的Telegram格式；
+- 仅以PDF子附件为完成标准的Zotero日期归档；
+- README、Skill说明、提示词、部署、安装、系统、Zotero、浏览器、脚本、安全和更新记录均在同一文件内分英文和中文章节；
+- Excel使用英文机器可读表头，中文解释放在同一文档的翻译部分；
+- 已验证macOS环境及Windows/Linux支持层级；
+- Telegram示例图片；
+- 可分享的Release ZIP流程。
+
+### 已知限制
+
+- Zotero Local API授权可能需要用户操作并可能超时；
+- Zotero不同版本的附件上传行为可能不同；
+- ScienceDirect、ASCE、Wiley等可能使用人机验证阻塞自动访问；
+- 采集器只为 `Fire Technology` 内置专用出版社列表配置；其他无RSS期刊主要依赖Crossref，除非继续扩展；
+- RSS作者字段可能混入单位、ORCID或邮箱，必须保守处理。
