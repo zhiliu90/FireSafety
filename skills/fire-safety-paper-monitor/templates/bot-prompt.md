@@ -30,6 +30,8 @@ For `Fire Technology`, use the Springer journal article list and online ISSN `15
 
 For `Fire and Materials`, use the official Wiley RSS feed and online ISSN `1099-1018` as the precise fallback. For `Journal of Structural Fire Engineering` and `International Journal of Wildland Fire`, keep the RSS cell blank unless a reliable publisher feed is verified, and use ISSN-scoped Crossref (`2040-2325` and `1448-5516`).
 
+Track `Nature`, `Science`, `Nature Communications`, `Proceedings of the National Academy of Sciences` (PNAS), and `Communications Engineering` through their official RSS feeds. If a feed fails, use ISSN-scoped Crossref with `1476-4687`, `1095-9203`, `2041-1723`, `1091-6490`, and `2731-3395`, respectively.
+
 ## Title filter
 
 Include papers whose titles contain, case-insensitively:
@@ -208,6 +210,7 @@ The following Chinese text is provided only as a translation to help Chinese-spe
 - `Fire and Materials` 使用Wiley官方RSS，在线ISSN为 `1099-1018`；
 - `Journal of Structural Fire Engineering` 的RSS留空，使用在线ISSN `2040-2325`进行Crossref后备；
 - `International Journal of Wildland Fire` 的RSS留空，使用在线ISSN `1448-5516`进行Crossref后备。
+- `Nature`、`Science`、`Nature Communications`、`Proceedings of the National Academy of Sciences`（PNAS）和`Communications Engineering`使用各自官方RSS；RSS失败时分别使用ISSN `1476-4687`、`1095-9203`、`2041-1723`、`1091-6490`、`2731-3395`进行Crossref后备。
 
 ## 标题筛选规则
 

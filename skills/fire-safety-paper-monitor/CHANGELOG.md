@@ -4,6 +4,19 @@
 
 All notable changes to this skill are documented here.
 
+## [0.1.2] - 2026-09-02
+
+### Added
+
+- `Nature`, `Science`, `Nature Communications`, `Proceedings of the National Academy of Sciences` (PNAS), and `Communications Engineering`;
+- verified official RSS feeds for all five journals;
+- online ISSN profiles for precise Crossref fallback when a feed fails.
+
+### Changed
+
+- expanded the starter workbook from 74 to 79 journals;
+- extended regression coverage to all newly tracked comprehensive journals.
+
 ## [0.1.1] - 2026-09-02
 
 ### Added
@@ -51,6 +64,19 @@ All notable changes to this skill are documented here.
 ## Chinese Translation (Reference Only)
 
 The following Chinese text is provided only as a translation to help Chinese-speaking readers. The English section above is the normative version.
+
+## [0.1.2] - 2026-09-02
+
+### 新增
+
+- `Nature`、`Science`、`Nature Communications`、`Proceedings of the National Academy of Sciences`（PNAS）和`Communications Engineering`；
+- 为5种期刊配置并验证官方RSS；
+- 为RSS失败情况配置在线ISSN限定的Crossref后备。
+
+### 变更
+
+- Excel模板从74种期刊扩展到79种；
+- 回归测试扩展到全部新增综合性期刊。
 
 ## [0.1.1] - 2026-09-02
 

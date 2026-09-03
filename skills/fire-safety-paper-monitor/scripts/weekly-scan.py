@@ -59,6 +59,21 @@ JOURNAL_PROFILES = {
     "International Journal of Wildland Fire": {
         "issn": "1448-5516",
     },
+    "Nature": {
+        "issn": "1476-4687",
+    },
+    "Science": {
+        "issn": "1095-9203",
+    },
+    "Nature Communications": {
+        "issn": "2041-1723",
+    },
+    "Proceedings of the National Academy of Sciences": {
+        "issn": "1091-6490",
+    },
+    "Communications Engineering": {
+        "issn": "2731-3395",
+    },
 }
 XML_NS_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 PKG_REL_NS = "http://schemas.openxmlformats.org/package/2006/relationships"

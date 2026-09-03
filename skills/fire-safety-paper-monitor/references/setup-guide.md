@@ -6,7 +6,7 @@ This guide helps another agent reproduce the weekly workflow. The package contai
 
 ## Files
 
-- `templates/journal-rss-table.xlsx`: 74 starter journals and known RSS URLs;
+- `templates/journal-rss-table.xlsx`: 79 starter journals and known RSS URLs;
 - `templates/bot-prompt.md`: English and Chinese prompts in one file;
 - `scripts/weekly-scan.py`: RSS/publisher/Crossref collection and snapshots;
 - `scripts/weekly-send.py`: freshness gate for the summary stage;
@@ -60,6 +60,8 @@ Journal name | RSS
 Use official RSS URLs. Leave the RSS cell blank when no reliable feed exists. Do not put HTML journal pages in the RSS column.
 
 `Fire Technology` uses the Springer articles page and Crossref online ISSN `1572-8099`. `Fire and Materials` uses the Wiley RSS feed and ISSN `1099-1018`. `Journal of Structural Fire Engineering` and `International Journal of Wildland Fire` use ISSN-scoped Crossref fallbacks (`2040-2325` and `1448-5516`).
+
+The workbook also tracks `Nature`, `Science`, `Nature Communications`, `Proceedings of the National Academy of Sciences` (PNAS), and `Communications Engineering` through verified official RSS feeds and ISSN-scoped Crossref fallbacks.
 
 ## Direct institutional access
 
@@ -131,7 +133,7 @@ The following Chinese text is provided only as a translation to help Chinese-spe
 
 ## 1. 包内文件
 
-- `journal_rss_table.xlsx`：期刊名称与官方 RSS 地址。当前包含74种期刊，其中部分期刊没有RSS，需要出版社页面或Crossref后备。
+- `journal_rss_table.xlsx`：期刊名称与官方RSS地址。当前包含79种期刊，其中部分期刊没有RSS，需要出版社页面或Crossref后备。
 - `templates/bot-prompt.md`：同一文件先提供英文主版本，再提供中文翻译。
 - `scripts/weekly-scan.py`：RSS、Springer页面、Crossref、快照差异、标题筛选及报告生成脚本。
 - `scripts/weekly-send.py`：检查13点结果是否存在且未过期，并把原始报告交给后续总结阶段。
@@ -207,6 +209,8 @@ https://onlinelibrary.wiley.com/feed/10991018/most-recent
 ```
 
 `Journal of Structural Fire Engineering` 和 `International Journal of Wildland Fire` 的RSS留空，分别使用在线ISSN `2040-2325`、`1448-5516`进行Crossref后备检索。
+
+`Nature`、`Science`、`Nature Communications`、`Proceedings of the National Academy of Sciences`（PNAS）和`Communications Engineering`均使用已验证的官方RSS，并配置对应ISSN作为RSS失败时的精确Crossref后备。
 
 ## 6. 校园网与代理
 
